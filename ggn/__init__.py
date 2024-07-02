@@ -15,7 +15,7 @@ userbot = Client("gaganrepo",api_id=API_ID,api_hash=API_HASH,session_string=SESS
 try:
     userbot.start()
 except BaseException:
-    print("Your Session expired please re add that... thanks @devggn.")
+    print("Your Session expired please re add that... thanks .")
     sys.exit(1)
 
 Bot = Client(
