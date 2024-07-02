@@ -39,7 +39,7 @@ async def copy_message_with_chat_id(client, sender, chat_id, message_id):
         for word, replace_word in replacements.items():
             final_caption = final_caption.replace(word, replace_word)
         
-        caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[Team SPY](https://t.me/devggn)**__"
+        caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[Ʉ₦₭₦Ø₩₦](https://t.me/Save_restricted_content_base)**__"
         
         if msg.media:
             if msg.media == MessageMediaType.VIDEO:
@@ -106,7 +106,7 @@ async def send_video_with_chat_id(client, sender, path, caption, duration, hi, w
             progress=progress_for_pyrogram,
             progress_args=(
                 client,
-                '**__Uploading: [Team SPY](https://t.me/devggn)__**\n ',
+                '**__Uploading: [Ʉ₦₭₦Ø₩₦](https://t.me/Save_restricted_content_base)__**\n ',
                 upm,
                 time.time()
             )
@@ -251,7 +251,7 @@ async def check(userbot, client, link, event):
         except Exception as e:
             logging.error(e)
             # If user_bot instance fails, fall back to using userbot
-            return False, "Bot is not there add your session to save without link or send invite link...\n\nTo generate session you can use our official bot - @stringsessionAK47bot.."
+            return False, "Bot is not there add your session to save without link or send invite link...\n\nTo generate session you can use our official bot ."
     else:
         try:
             chat = str(link.split("/")[-2])
@@ -357,10 +357,10 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
             edit = await client.edit_message_text(sender, edit_id, "Trying to Download.")
             user_session = load_user_session(sender)
             if user_session:
-              file = await user_bot.download_media(msg, progress=progress_for_pyrogram, progress_args=(client, "**__Unrestricting__: __[Team SPY](https://t.me/devggn)__**\n ", edit, time.time()))
+              file = await user_bot.download_media(msg, progress=progress_for_pyrogram, progress_args=(client, "**__Unrestricting__: __[Ʉ₦₭₦Ø₩₦](https://t.me/Save_restricted_content_base)__**\n ", edit, time.time()))
               await user_bot.stop()
             else:
-              file = await userbot.download_media(msg, progress=progress_for_pyrogram, progress_args=(client, "**__Unrestricting__: __[Team SPY](https://t.me/devggn)__**\n ", edit, time.time()))            # Retrieve user's custom renaming preference if set, default to '@devggn' otherwise
+              file = await userbot.download_media(msg, progress=progress_for_pyrogram, progress_args=(client, "**__Unrestricting__: __[Ʉ₦₭₦Ø₩₦](https://t.me/Save_restricted_content_base)__**\n ", edit, time.time()))            # Retrieve user's custom renaming preference if set, default to '@devggn' otherwise
             if not file:
               await client.send_message(sender, "Failed to download the media.")
               return None
@@ -427,7 +427,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 replacements = load_replacement_words(sender)
                 for word, replace_word in replacements.items():
                     final_caption = final_caption.replace(word, replace_word)
-                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[Team SPY](https://t.me/devggn)**__"
+                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[Ʉ₦₭₦Ø₩₦](https://t.me/Save_restricted_content_base)**__"
                 await send_video_with_chat_id(client, sender, path, caption, duration, hi, wi, thumb_path, upm)
             elif str(file).split(".")[-1] in ['jpg', 'jpeg', 'png', 'webp']:
                 if file_n != '':
@@ -464,14 +464,14 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 replacements = load_replacement_words(sender)
                 for word, replace_word in replacements.items():
                     final_caption = final_caption.replace(word, replace_word)
-                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[Team SPY](https://t.me/devggn)**__"
+                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[Ʉ₦₭₦Ø₩₦](https://t.me/Save_restricted_content_base)**__"
                 await send_document_with_chat_id(client, sender, path, caption, thumb_path, upm)
                     
             os.remove(file)
             await upm.delete()
             return None
         except (ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid):
-            await client.edit_message_text(sender, edit_id, "Bot is not in that channel/group \nsend the invite or add session vioa command /addsession link so that bot can join the channel\n\nTo generate session you can use our official bot - @stringsessionAK47bot")
+            await client.edit_message_text(sender, edit_id, "Bot is not in that channel/group \nsend the invite or add session vioa command /addsession link so that bot can join the channel\n\nTo generate session you can use our official bot")
             return None
     else:
         edit = await client.edit_message_text(sender, edit_id, "Cloning.")
@@ -487,12 +487,12 @@ async def get_bulk_msg(userbot, client, sender, msg_link, i):
 
 # ------------------------------------ PDF WATERMARK FUNCTIONS -----------------------------------------------------------------------
 
-# Contact me and Purchase this code part ... @ggnhere on telegram
+# Contact me and Purchase this code part ... @Chat_support_cc_bot on telegram
 
 
 #------------------------ FFMPEG CODES and Functions ----------------------------------------------- 
 
-# Puchase Repo from me to get this ... contact @ggnhere on telegram
+# Puchase Repo from me to get this ... contact @Chat_support_cc_bot on telegram
 
 
 # ------------------------ Button Mode Editz FOR SETTINGS ----------------------------
@@ -609,10 +609,10 @@ async def settings_command(event):
     buttons = [
         [Button.inline("Set Chat ID", b'setchat'), Button.inline("Set Rename Tag", b'setrename')],
         [Button.inline("Caption", b'setcaption'), Button.inline("Replace Words", b'setreplacement')],
-        [Button.inline("Remove Words", b'delete'), Button.url("Developer", 'https://t.me/ggnhere')],
+        [Button.inline("Remove Words", b'delete'), Button.url("Developer", 'https://t.me/Chat_support_cc_bot')],
         [Button.inline("Login", b'addsession'), Button.inline("Logout", b'logout')],
         [Button.inline("Set Thumbnail", b'setthumb'), Button.inline("Remove Thumbnail", b'remthumb')],
-        [Button.url("Repo Link", "https://github.com/devgaganin/Save-Restricted-Content-Bot-Repo/")]
+        [Button.url("Repo Link", "https://t.me/Chat_support_cc_bot")]
     ]
     
     await teamspy.send_file(
